@@ -1,5 +1,5 @@
 resource "aws_instance" "lab_05" {
-  ami           = "ami-097a2df4ac947655f"
+  ami           = "ami-085f9c64a9b75eed5"
   instance_type = "t2.micro"
   key_name      = "aws_key"
   vpc_security_group_ids = [
