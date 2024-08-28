@@ -30,7 +30,11 @@ You will need openssh or another SSH tool installed.
 > NOTE: Consider using ED25519 instead of the default RSA.
 > For example: `ssh-keygen -t ed25519`
 
-- Name the key "aws_key" and save the key to the "keys" directory. (You can also specify the path and key name with the `-f` option of the ssh-keygen command.)
+- Name the key "aws_key" and save the key to the "keys" directory. When prompted you can type:
+
+  `./keys/aws_key`
+
+> NOTE: You can also specify the path and key name with the `-f` option of the ssh-keygen command.)
 
 > NOTE: The solution does not have a key pair, you will have to take care of that part!
 
@@ -45,10 +49,8 @@ You will need openssh or another SSH tool installed.
 
 - In version.tf, use the standard terraform block code that you have used previously.
 - In provider.tf, use the standard provider block code that you have used previously. Change the region to meet your geographical requirements.
-- Copy the code from code-main.txt to your main.tf file. Analyze this file. Find the block named <resource "aws_key_pair"> and add your SSH public key where it says <public_key>
+- Copy the code from code-main.txt to your main.tf file. Analyze this file. Find the block named `resource "aws_key_pair"` and add your SSH public key where it says `public_key`
 - Copy the code from code-outputs.txt to your outputs.tf file. Analyze this file. What information will Terraform supply you with when the terraform apply is complete?
-
-**IMPORTANT!!** WATCH FOR ERRORS!!
 
 > Note: If you were to apply the infrastructure and attempt to SSH in, you would use the `ubuntu` username. For example, you might do something similar to this:
 `ssh -i "../keys/aws_key" ubuntu@<ip_address>`
@@ -77,7 +79,7 @@ Let's complete those tasks now.
 
 ### Add the Public SSH Key
 
-- In the YAML script file, find "ssh_authorized_keys:" and add your SSH public key in the next line.
+- In the YAML script file, find `ssh_authorized_keys:` and add your SSH public key in the next line.
 - Save the file.
 
 ### Point to the Script from Terraform
@@ -95,11 +97,16 @@ Let's complete those tasks now.
 
 - Your working Terraform directory is /instances.
 - Use the commands you have learned to initialize, format, validate, plan, and finally, apply your configuration.
+
+⚠️ **IMPORTANT** - WATCH FOR ERRORS. FIX AS NECESSARY! ⚠️
+
 - What information was outputted to you in the terminal?
 
 > NOTE: If you lose the outputted information just type `terraform output` to see it again!
 
 - Once the infrastructure has been built, view it within your AWS console.
+  
+> NOTE: Depending on server load at AWS, you might need to wait a minute or two for the instance to be initialized and for the script to run its course.
 
 ## SSH into your new virtual machine
 
@@ -125,12 +132,15 @@ and
   ```console
   http://<ipaddress>
   ```
+- Take a minute or two to analyze what was built at the AWS console. Also, view the state file.
 
 - Play around with it! You did good!
 
 ## Destroy the infrastructure
 
 When you are finished analyzing your infrastructure, use the appropriate command to destroy the infrastructure.
+
+> ⚠ **IMPORTRANT** ⚠ I've mentioned it a hundred times it seems, but please do not forget to destroy your infrastructure!
 
 ---
 
