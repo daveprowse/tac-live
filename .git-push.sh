@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ## Pushes all content automatically and gives timestamp in the commit description
+## Do not include in repo. Add to .gitignore
 echo; echo
 echo 'Running GitHub Script!'
 echo; echo
