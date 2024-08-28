@@ -1,6 +1,7 @@
 .git-push.sh
 .vscode/
 testing/
+.gitignore
 
 
 
