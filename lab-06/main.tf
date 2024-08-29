@@ -2,11 +2,11 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 4.20"
+      version = "~> 5.00"
     }
   }
 
-  required_version = ">= 1.2.8"
+  required_version = ">= 1.9.0"
 }
 
 provider "aws" {
@@ -14,7 +14,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "lab_06" {
-  ami           = "ami-0c7c4e3c6b4941f0f"
+  ami           = "ami-0b40807e5dc1afecf"
   instance_type = "t2.micro"
   tags = {
     Name      = "Lab-06-Variables!!!"

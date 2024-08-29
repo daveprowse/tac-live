@@ -49,7 +49,10 @@ You will need openssh or another SSH tool installed.
 
 - In version.tf, use the standard terraform block code that you have used previously.
 - In provider.tf, use the standard provider block code that you have used previously. Change the region to meet your geographical requirements.
-- Copy the code from code-main.txt to your main.tf file. Analyze this file. Find the block named `resource "aws_key_pair"` and add your SSH public key where it says `public_key`
+- Copy the code from code-main.txt to your main.tf file.
+  - Analyze this file. 
+  - Find the block named `resource "aws_key_pair"`
+  - Add your SSH public key where it says `public_key`
 - Copy the code from code-outputs.txt to your outputs.tf file. Analyze this file. What information will Terraform supply you with when the terraform apply is complete?
 
 > Note: If you were to apply the infrastructure and attempt to SSH in, you would use the `ubuntu` username. For example, you might do something similar to this:
