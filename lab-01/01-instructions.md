@@ -23,6 +23,8 @@ Locate the latest version for your platform, download it, verify the checksum, u
 
 If you have any issues, ASK QUESTIONS!
 
+> Note: You can also install from [this tutorial link](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli) which has a lot of good information on installation methods.
+
 ## Verify that Terraform is installed and view the version
 
 `terraform version`
