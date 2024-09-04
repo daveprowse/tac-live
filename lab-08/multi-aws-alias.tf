@@ -7,7 +7,7 @@ provider "aws" {
 
 ## The second provider uses an alias. "ohio" is the alias for "us-east-2"
 provider "aws" {
-  alias = "ohio"
+  alias  = "ohio"
   region = "us-east-2"
 }
 

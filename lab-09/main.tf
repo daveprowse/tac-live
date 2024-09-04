@@ -6,15 +6,12 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 4.16"
+      version = "~> 5.00"
     }
   }
 
-  required_version = ">= 1.2.0"
+  required_version = ">= 1.9.0"
 }
-
-variable "aws_access_key" {}
-variable "aws_secret_key" {}
 
 provider "aws" {
   access_key = var.aws_access_key
@@ -22,8 +19,11 @@ provider "aws" {
   region     = "us-east-2"
 }
 
+variable "aws_access_key" {}
+variable "aws_secret_key" {}
+
 resource "aws_instance" "lab_09" {
-  ami           = "ami-0c7c4e3c6b4941f0f"
+  ami           = "ami-0b40807e5dc1afecf"
   instance_type = "t2.micro"
 
   tags = {

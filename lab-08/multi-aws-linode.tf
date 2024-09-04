@@ -3,16 +3,16 @@
 ## In the terraform block we specify the AWS and Linode sources
 ## for the provider plugins and the versions.
 terraform {
-  required_version = ">= 1.3.0"
+  required_version = ">= 1.9.0"
 
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 4.20"
+      version = "~> 5.00"
     }
     linode = {
       source  = "linode/linode"
-      version = "1.27.1"
+      version = "2.27.0"
     }
 
   }
@@ -24,10 +24,13 @@ provider "aws" {
   region = "us-east-2"
 }
 
-provider "linode" {
-  region = "us-east"
-  token = var.token  
+provider "linode" {  
+  token  = var.token
 }
+
+variable "token" {}
+variable "key" {}
+variable "password" {}
 
 ## In another file we might specify a Linode instance in the following way:
 resource "linode_instance" "lnsf_arch" {
@@ -35,7 +38,10 @@ resource "linode_instance" "lnsf_arch" {
   image           = "linode/arch"
   region          = "us-east"
   type            = "g6-standard-1"
-  authorized_keys = var.key
+  authorized_keys = [var.key]
   root_pass       = var.password
 }
-## NOTE: Secure credentials would best be stored in a different fashion!
+## NOTE: Secure credentials (including token, SSH key, and password) should not be listed here. 
+## Instead, you can make a terraform.tfvars file (and exclude it from source in .gitignore)
+## Or, better yet, use environment variables or a vault of some sort.
+

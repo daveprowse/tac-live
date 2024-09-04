@@ -10,7 +10,7 @@ module "webserver-user2" {
   source     = "../modules/webserver"
   vpc_id     = aws_vpc.main.id
   cidr_block = "10.0.0.0/16"
-  ami        = "ami-0d593311db5abb72b"
+  ami        = "ami-02d3770deb1c746ec"
   # Remember, select an AMI that exists in your AWS region.
   # If in doubt, use the AMI above (which is Amazon Linux) 
   # and the us-west-2 region for this user.
