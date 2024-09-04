@@ -19,4 +19,3 @@
 - Opt-07: (Optional) Import
 - Opt-08: (Optional) Multiple Workspaces in the Terraform CLI
 - Z-exam-prep: Exam Taking Techniques
-

@@ -25,11 +25,11 @@ This lab does the following:
 
 > Note: This is similar to Lab 05.
 
-- If you change the name of the key, then specify that name in main.tf and in automagic.sh
+> Note: If you change the name of the key, then specify that name in main.tf and in automagic.sh
 
 ## Analyze the instances and scripts directories
 
-This is a similar setup to Lab 05. However, it will create two separate instances. 
+This is a similar setup to Lab 05. However, it will create two separate instances.
 
 > Note: If you decide to change the AWS region, make sure that you utilize an Ubuntu AMI that exists in that region.
 
@@ -83,7 +83,7 @@ Use the terraform graph command to create a digraph and visualize it in a browse
 That should create the digraph file. Take a look at it.
 
 - Next, view the digraph info as a visual graph in a browser. There are several options for this. For example:
-  - Copy and paste the data to http://webgraphviz.com
+  - Copy and paste the data to a digraph visualizer website (such as http://webgraphviz.com)
   - Run it manually by installing graphviz, utilizing the dot command, and opening it in your favorite browser:
 
     `sudo apt install graphviz`  (most likely already installed)
@@ -92,13 +92,17 @@ That should create the digraph file. Take a look at it.
 
     `firefox output.svg`
 
-That should display dependency graph of your resources in Terraform. Fun!
+Try that now. It should display dependency graph of your resources in Terraform. Fun!
 
 ## Destroy the infrastructure
 
 Once again, it's very important to destroy the infrastructure so that you are not billed any more than need be.
 
-From the lab-10 directory, use the autodestroy.sh script to destroy the infrastructure. If for some reason that does not work, go to the instances directory and type:
+- Go to the lab-10 directory
+- Use the `autodestroy.sh` script to destroy the infrastructure.
+  `./autodestroy.sh`
+
+If for some reason that does not work, go to the instances directory and type:
 
 `terraform destroy`
 

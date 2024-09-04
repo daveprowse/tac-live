@@ -7,8 +7,7 @@ variable "region" {
 variable "ami" {
   description = "The Amazon machine image to be used"
   type = string
-  # I recommend the Debian image we used previously
-  # ami-0c7c4e3c6b4941f0f
+  # I recommend the Debian image we used previously  
 }
 
 variable "name" {
