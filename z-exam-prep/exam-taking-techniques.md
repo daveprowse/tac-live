@@ -87,6 +87,8 @@ In closing, confidence is the key when taking an exam.
 
 *Remember, you can do this!*
 
+For more detailed exam-taking techniques, see [this link](https://prowse.tech/tag/exam-taking-techniques/) on my website.
+
 # GOOD LUCK!
 
 I wish you the best of luck on the exam. But really... it's skill that you need, and at this point, it's skill that you possess. Use it. Take care!
