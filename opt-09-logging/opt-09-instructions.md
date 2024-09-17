@@ -71,5 +71,5 @@ All logging is now turned off.
 
 ---
 ## *Be persistent and vigilant with your logging efforts!*
----
 
+---

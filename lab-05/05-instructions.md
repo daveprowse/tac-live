@@ -89,7 +89,7 @@ Let's complete those tasks now.
 
 - Add the following new line to your main.tf file just before the tags block and just after the closing square bracket (]).
 
-  ```
+  ```hcl
   user_data = file("../scripts/apache-mkdocs.yaml")
   ```
 
@@ -135,6 +135,7 @@ and
   ```console
   http://<ipaddress>
   ```
+
 - Take a minute or two to analyze what was built at the AWS console. Also, view the state file.
 
 - Play around with it! You did good!
